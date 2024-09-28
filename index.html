@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="new.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <form action="signup.php" method="post">
+        <div class="container">
+            <div class="login-section">
+                <div class="logo">
+                    <img src="./420-4209476_meserete-kristos-church-logo-hd-png-download.png" alt="Logo">
+                </div>
+                <br>
+                <h1>Signup for a New Account</h1> <!-- Improved heading text -->
+                <br>
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="confirmpassword" placeholder="Confirm Password" required> <!-- Adjusted placeholder text -->
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="phone" name="phone" placeholder="Phone" required> <!-- Adjusted placeholder text -->
+                <input type="referral_code" name="referral_code" placeholder="referral_code" required>
+                <br><br>
+                <p>---------------- OR ----------------</p> <!-- Wrapped in <p> tags for semantic HTML -->
+                <br>
+                <h4>Signup Using Social Networks</h4>
+                <div class="foot">
+                    <a href="https://www.facebook.com/reg/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com/accounts/signup/email/?hl=en" target="_blank" rel="noopener noreferrer"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.linkedin.com/signup" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
+                </div>
+                <br>
+                <p>Already have an account? <a href="./login.html">Login</a></p> <!-- Wrapped in <p> tags for semantic HTML -->
+                <br>
+                <button type="submit">Signup</button>
+            </div>
+        </div>
+    </form>    
+</body>
+</html>
