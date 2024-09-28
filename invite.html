@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invite Friends</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Invite Friends</h2>
+        <p>Share your referral link to invite friends and earn rewards!</p>
+        <div class="referral-link">
+            <input type="text" id="text" readonly><br><br>
+            <button onclick="generateReferralLink()">Generate Link</button><br><br>
+            <button onclick="copyReferralLink()">Copy Link</button>
+        </div>
+    </div>
+
+    <script>
+        function generateReferralCode(length = 8) {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let result = '';
+            for (let i = 0; i < length; i++) {
+                const randomIndex = Math.floor(Math.random() * characters.length);
+                result += characters[randomIndex];
+            }
+            return result;
+        }
+
+        function generateReferralLink() {
+            const referralCode = generateReferralCode();
+            const referralLink = `https://vip.com/register?ref=${referralCode}`;
+            document.getElementById('referralLink').value = referralLink;
+        }
+
+        function copyReferralLink() {
+            const copyText = document.getElementById('referralLink');
+            copyText.select();
+            document.execCommand('copy');
+            alert('Referral link copied to clipboard!');
+        }
+    </script>
+</body>
+</html>

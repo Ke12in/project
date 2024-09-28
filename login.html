@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="signup.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <form method="POST" action="login.php" id="login-form">
+    <div class="container">
+        <div class="login-section">
+            <div class="logo">
+                <img src="./420-4209476_meserete-kristos-church-logo-hd-png-download.png" alt="diprella">
+            </div>
+            <h2>Login to your account</h2>
+            <p>Login using social networks</p>
+            <div class="foot">
+                <a href="https://www.facebook.com/login.php/"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/accounts/login/?hl=en"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.linkedin.com/login"><i class='bx bxl-linkedin'></i></a>
+                <p>OR</p>
+            </div>
+            <!-- Error Message Placeholder -->
+            <div id="error-message" style="color: red;"></div>
+            <form method="POST" action="login.php" id="login-form">
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <br>
+                <p>Don't have an account? <a href="./signup.html">Signup</a></p>
+                <br>
+                <button type="submit"><a href="./home.html">Login</a></button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        // Check if an error message is present in the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get('error');
+        if (error) {
+            document.getElementById('error-message').innerHTML = error + ' <a href="./signup.html">Sign up here</a>';
+        }
+    </script>
+</body>
+</html>

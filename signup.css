@@ -1,0 +1,101 @@
+body{
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     font-family: 'Work Sans', Helvetica, sans-serif;
+    color: #1c9e91;
+    height: 100vh;
+}
+.container{
+    background-color: white;
+    width: auto;
+    height: auto;
+    display: flex;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+.login-section{
+    padding: 40px;
+    width: auto;
+    box-sizing: border-box;
+    color: #1c9e91;
+}
+.login-section{
+    border-right: 1px solid #e0e0e0;
+    color: #1c9e91;
+}
+h2{
+    margin-bottom: 20px;
+}
+p{
+    color: #777;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+input[type="Email"],[type="Password"],[type="initial deposit"]{
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    border-radius: 5px;
+    color: #1c9e91;
+}
+
+.logo img{
+    width: 60px;
+    height: auto;
+}
+.foot a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 30px;
+    background: transparent;
+    border: 2px solid #1c9e91;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.foot a:hover{
+    color: rgb(43, 40, 40);
+    background-color: #1c9e91;
+}
+.foot p{
+    text-align: center;
+    justify-content: center;
+}
+button a{
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+button{
+    background-color: #1dceb9;
+    color: white;
+    padding: 5px;
+    width: 230px;
+    height: 35px;
+    font-size: 18px;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #105047;
+}
+@media(max-width:300px) {
+    span.password{
+        display:block;
+        float:none;
+    }
+}
